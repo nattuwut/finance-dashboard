@@ -1,3 +1,9 @@
+const transactions = [
+  { id: 1, name: "Salary", type: "Income", amount: 35000 },
+  { id: 2, name: "Shopping", type: "Expense", amount: 3500 },
+  { id: 3, name: "Food", type: "Expense", amount: 1500 }
+];
+
 function App() {
   return (
     <div className="dashboard">
@@ -24,21 +30,13 @@ function App() {
       </div>
       <div className="transactions">
         <h2>Recent Transactions</h2>
-        <div className="transaction">
-          <h3>Salary</h3>
-          <h3>Income</h3>
-          <p>35,000</p>
-        </div>
-        <div className="transaction">
-          <h3>Shopping</h3>
-          <h3>Expense</h3>
-          <p>3,500</p>
-        </div>
-        <div className="transaction">
-          <h3>Food</h3>
-          <h3>Expense</h3>
-          <p>1,500</p>
-        </div>
+        {transactions.map((transaction) => (
+          <div className="transaction" key={transaction.id}>
+            <h3>{transaction.name}</h3>
+            <p>{transaction.type}</p>
+            <p>{transaction.amount}</p>
+          </div>
+        ))}
       </div>
     </div>
 
