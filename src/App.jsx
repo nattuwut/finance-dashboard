@@ -1,3 +1,5 @@
+import './App.css';
+
 const transactions = [
   { id: 1, name: "Salary", type: "Income", amount: 35000 },
   { id: 2, name: "Shopping", type: "Expense", amount: 3500 },
