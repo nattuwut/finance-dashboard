@@ -34,8 +34,10 @@ function App() {
         <h2>Recent Transactions</h2>
         {transactions.map((transaction) => (
           <div className="transaction" key={transaction.id}>
-            <h3>{transaction.name}</h3>
-            <p>{transaction.type}</p>
+            <div>
+              <h3>{transaction.name}</h3>
+              <p>{transaction.type}</p>
+            </div>
             <p>{transaction.amount}</p>
           </div>
         ))}
